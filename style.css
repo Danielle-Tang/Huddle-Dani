@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+/*font-family: 'Poppins', sans-serif;
+font-family: 'Open Sans', sans-serif;*/
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: hsl(257, 40%, 49%);
+    background-image: url(bg-desktop.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    max-width: 1440px; /*si largeur max 1440px, si c'est moins comme tu veux, plus souple*/
+    margin: auto; /*centre horizontalement*/
+    margin-top: 50px;
+}
+
+.text {
+    width: 40%;
+    min-width: 375px;
+    color: white;
+}
+
+.titre {
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    color:white;
+}
+
+.descrip {
+    font-family: 'Open Sans', sans-serif;
+    color:white;
+
+}
+
+section {
+    display: flex;
+    flex: wrap;
+    justify-content: space-evenly;
+}
+
+.image {
+    /*autre technique pour mettre l'iamge dans le CSS 
+    background-image: url(images/bg-mobile.svg);
+    mais faut rajouter les lignes suivantes
+    background-size: contain;
+    background-repeat: no-repeat;
+    min-width: 375px;
+    width: 60%;*/
+}
+
+button {
+    background-color: white;
+    color: hsl(257, 40%, 49%);
+    margin-top: 25px;
+    padding: 20px 80px 20px 80px;
+    border-radius: 25px;
+    border-color: hsl(257, 40%, 49%);
+    cursor: pointer; /*la flèche devient une petite main*/
+}
+
+button:hover {
+    background-color: hsl(300, 69%, 71%);
+    color: white;
+}
+
+.reseaux {
+    font-size: 2rem;
+    padding: 10px;
+    margin: 50px;
+    height: 50px;
+    padding: 15px 10px 5px 10px;
+    color: white;
+    border: 2px solid #FFF;
+    border-radius: 50px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.reseaux:hover {
+    color: hsl(300, 69%, 71%) ;
+    border: 2px solid hsl(300, 69%, 71%);
+}
+
+
+
+/*@media toujours à la fin du CSS
+une media query par format*/
+@media (max-width:375px) {
+    body{
+        background-image: url("images/bg-mobile.svg");
+    }
+
+    .image {
+        height: 200px;
+    }
+
+    .text {
+        padding: 50px;
+        font-size: 1rem; /*1rem équivalent à 16px*/
+    }
+
+    h1{
+        font-size: 1.5rem;
+    }
+}
